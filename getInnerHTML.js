@@ -33,8 +33,8 @@ function getInnerHTML(x, id) {
 	const idPosition = x.search(`id="${id}"`)
 	
 	function getIdElementTag(id) {
-		const sringBeforeId = x.slice(0, idPosition);
-		const stringInTagBeforeId = sringBeforeId.slice(sringBeforeId.lastIndexOf('<') + 1);
+		const stringBeforeId = x.slice(0, idPosition);
+		const stringInTagBeforeId = stringBeforeId.slice(stringBeforeId.lastIndexOf('<') + 1);
 		const tag = stringInTagBeforeId.slice(0, stringInTagBeforeId.indexOf(' '));
 		return tag
 	}
